@@ -8,7 +8,7 @@ $sections = [
     'members',
 ];
 
-$main = file_get_contents('./_components/main.html');
+$main = file_get_contents('./index.html');
 
 if(!function_exists('load_page')) {
     function load_page() {
