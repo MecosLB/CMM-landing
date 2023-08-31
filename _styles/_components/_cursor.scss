@@ -1,0 +1,15 @@
+.cursor-section {
+    pointer-events: none !important;
+  
+    .custom {
+      position: fixed;
+      top: 0;
+      left: 0;
+    // REMEMBER: All content (non-containers, bg, etc.) should have it z-index greater than the .custom cursor
+      z-index: 1;
+      
+      circle {
+        fill: red;
+      }
+    }      
+  }

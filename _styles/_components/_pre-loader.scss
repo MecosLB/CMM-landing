@@ -1,0 +1,148 @@
+.preloader-section {
+    position: absolute;
+    z-index: 100;
+    background-color: rgba(0,0,0,0);
+
+    .loader {
+        position: absolute;
+        z-index: 1;
+
+        img {
+            max-width: 250px;
+        }
+
+        .circle-container {
+            width: 300px;
+            height: 300px;
+
+            .spinner {
+                position: absolute;
+                opacity: 0;
+                
+                img {
+                    width: 225px;
+                    max-width: 250px;
+                    filter: grayscale(1);
+                }
+
+                &.play {
+                    animation-name: fade-in;
+                    animation-duration: 1s;
+                    animation-iteration-count: 1;
+                    animation-fill-mode: forwards;
+                }
+
+                &.end {
+                    animation-name: fade-out;
+                    animation-duration: 0.5s;
+                    animation-iteration-count: 1;
+                    animation-fill-mode: forwards;
+                }
+            }
+
+            .logo {
+                position: relative;
+                top: 5px;
+                opacity: 0;
+
+                &.play {
+                    animation-name: fade-in-up;
+                    animation-duration: 1s;
+                    animation-iteration-count: 1;
+                    animation-fill-mode: forwards;
+                }
+
+                &.end {
+                    animation-name: fade-out;
+                    animation-duration: 0.5s;
+                    animation-iteration-count: 1;
+                    animation-fill-mode: forwards;
+                }
+            }
+        }
+    }
+
+    .section {
+
+        &__top,
+        &__bottom {
+            position: fixed;
+            height: 50vh;
+            animation-duration: 1.5s;
+            animation-delay: .5s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+        }
+
+        &__top {
+            top: 0;
+
+            &.play {
+                animation-name: open-up-top;
+            }
+        }
+
+        &__bottom {
+            top: 50vh;
+
+            &.play {
+                animation-name: open-up-bottom;
+            }
+        }
+    }
+
+    // ANIMATIONS
+    @keyframes fade-in {
+        from {
+            opacity: 0;
+            transform: scale(0);
+        }
+
+        to {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+
+    @keyframes fade-out {
+        from {
+            opacity: 1;
+        }
+
+        to {
+            opacity: 0;
+        }
+    }
+
+    @keyframes fade-in-up {
+        from {
+            transform: translateY(20px);
+            opacity: 0;
+        }
+
+        to {
+            transform: translateY(0px);
+            opacity: 1;
+        }
+    }
+
+    @keyframes open-up-top {
+        from {
+            transform: translateY(0);
+        }
+
+        to {
+            transform: translateY(-50vh);
+        }
+    }
+
+    @keyframes open-up-bottom {
+        from {
+            transform: translateY(0);
+        }
+
+        to {
+            transform: translateY(50vh);
+        }
+    }
+}

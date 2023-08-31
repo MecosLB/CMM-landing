@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+// Montserrat
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap');
+
+@import "./variables";
+@import "./fonts";
+@import "./responsive";
+// Components
+@import "./_components/cursor";
+@import "./_components/pre-loader";
+// Sections
+@import "./_sections/top";
+@import "./_sections/protokol";
+@import "./_sections/members";
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+img,
+picture,
+svg,
+video {
+    display: block;
+}
+
+main {
+    background: url(/assets/img/main/bg-mountain.webp), $main;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: contain;
+}
+
+.stop-scrolling {
+    height: 100vh;
+    overflow: hidden;
+}

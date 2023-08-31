@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CMM</title>
+    <!-- Styles -->
+    <link rel="stylesheet" href="./assets/css/tailwind-build.css">
+</head>
+
+<body>
+    <!-- Custom cursor element -->
+    <!-- {% cursor %} -->
+
+    <!-- Preloader element -->
+    {% pre-loader %}
+
+    <main class="stop-scrolling w-full">
+        <!-- Top section -->
+        {% top %}
+
+        <!-- Protokol -->
+        {% protokol %}
+
+        <!-- Members -->
+        {% members %}
+    </main>
+
+    <!-- GSAP Core -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <!-- GSAP ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <!-- GSAP ToweenMax -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
+    <!-- Custom scripts -->
+    <script src="/assets/scripts/cursor.js?v=1.0"></script>
+    <script src="/assets/scripts/preloader.js?v=1.0"></script>
+    <script src="/assets/scripts/top.js"></script>
+    <script src="/assets/scripts/protokol.js"></script>
+    <script src="/assets/scripts/members.js"></script>
+</body>
+
+</html>
