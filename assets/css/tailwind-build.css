@@ -942,8 +942,8 @@ video {
   position: relative;
   cursor: pointer;
   overflow: visible;
-  width: 250px;
-  height: 80px;
+  width: 320px;
+  height: 90px;
 }
 
 @media (min-width: 768px) {
@@ -962,7 +962,7 @@ video {
   background: url(../img/top/top-where.webp) center no-repeat;
   filter: blur(0.8rem);
   overflow: hidden;
-  background-size: 250px 80px;
+  background-size: 320px 90px;
 }
 
 @media (min-width: 768px) {
@@ -980,7 +980,7 @@ video {
   background: url(../img/top/top-here.webp) center no-repeat;
   opacity: 0;
   pointer-events: none;
-  background-size: 250px 80px;
+  background-size: 320px 90px;
 }
 
 @media (min-width: 768px) {
