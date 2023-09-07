@@ -32,6 +32,8 @@
 
         // UNFOCUS EFFECT
         toFocus.addEventListener('mousemove', getCoordinates);
+        toFocus.addEventListener('touchstart', getCoordinates);
         toFocus.addEventListener('touchmove', getCoordinates);
+        toFocus.addEventListener('touchend', getCoordinates);
     });
 })();
