@@ -1,0 +1,53 @@
+@media (min-height: 30em) {
+    main {
+        // @media (min-width: 1280px) {
+        scroll-snap-type: y mandatory;
+        height: 100vh;
+        overflow-y: scroll;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+        // }
+    }
+
+}
+
+.slide {
+    scroll-snap-align: center;
+    min-height: 100vh;
+
+    @media (min-height: 30em) {
+        height: 100vh;
+
+        &>* {
+            opacity: 0;
+            transform: translate3d(0, 4rem, 0);
+            transition: opacity 800ms var(--delay), transform 800ms cubic-bezier(0.13, 0.07, 0.26, 0.99) var(--delay);
+        }
+
+        &.scale>* {
+            transform: scale(0.5);
+        }
+    }
+
+    &.is-visible {
+        &>* {
+            opacity: 1;
+            transform: translate3d(0, 1rem, 0);
+        }
+
+        &.scale>* {
+            transform: scale(1);
+        }
+    }
+
+    &.left {
+        &.play {
+            &>* {
+                transform: translateX(-100vw);
+            }
+        }
+    }
+}

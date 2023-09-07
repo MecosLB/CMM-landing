@@ -8,6 +8,7 @@
 @import "./variables";
 @import "./fonts";
 @import "./responsive";
+@import "./full-scroll";
 // Components
 @import "./_components/cursor";
 @import "./_components/pre-loader";
@@ -31,14 +32,20 @@ video {
     display: block;
 }
 
-main {
-    background: url(../img/main/bg-mountain.webp), $main;
-    background-repeat: no-repeat;
-    background-position: top;
-    background-size: contain;
-}
-
 .stop-scrolling {
     height: 100vh;
     overflow: hidden;
 }
+
+// .top-section,
+// .protokol-section {
+//     @media (max-width: 1279px) {
+//         scroll-snap-type: y mandatory;
+//         height: 100vh;
+//         overflow-y: scroll;
+
+//         &::-webkit-scrollbar {
+//             display: none;
+//         }
+//     }
+// }
